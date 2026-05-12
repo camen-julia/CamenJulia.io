@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VIP Gallery 🔥</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;font-family:Arial,sans-serif;background:#000;color:white;text-align:center;padding-bottom:120px}
+.hero{padding:28px 14px;background:linear-gradient(180deg,#210012,#000)}
+.badge{display:inline-block;background:#ff1f5a;padding:10px 18px;border-radius:999px;font-weight:bold;box-shadow:0 0 18px #ff1f5a}
+h1{font-size:44px;margin:18px 0 8px}
+.subtitle{font-size:18px;color:#ccc}
+.online{color:#00ff88;font-size:24px;margin-top:14px;font-weight:bold}
+.timer{font-size:24px;color:#ffd700;margin-top:14px;font-weight:bold}
+
+.gallery{display:grid;grid-template-columns:1fr 1fr;gap:14px;padding:16px}
+.card{position:relative;overflow:hidden;border-radius:22px;box-shadow:0 0 14px rgba(255,255,255,.12)}
+.card img{
+width:100%;
+height:260px;
+object-fit:cover;
+filter:blur(2px);
+transform:scale(1.04);
+animation:lockBlur 3s forwards;
+}
+@keyframes lockBlur{
+0%{filter:blur(2px)}
+70%{filter:blur(2px)}
+100%{filter:blur(7px)}
+}
+.lock{position:absolute;bottom:12px;left:12px;background:rgba(0,0,0,.75);padding:7px 13px;border-radius:999px;font-size:17px;font-weight:bold}
+
+.cta{position:fixed;bottom:18px;left:50%;transform:translateX(-50%);width:88%;max-width:520px;background:#ff1f5a;padding:18px;border-radius:999px;font-size:25px;font-weight:bold;color:white;text-decoration:none;box-shadow:0 0 25px #ff1f5a;z-index:10}
+.fakepopup{position:fixed;bottom:180px;left:50%;transform:translateX(-50%);background:#111;padding:11px 16px;border-radius:999px;font-size:15px;box-shadow:0 0 15px #00ff88;z-index:999;white-space:nowrap}
+.note{font-size:12px;color:#aaa;margin-top:6px}
+</style>
+</head>
+<body>
+
+<div class="fakepopup">🔥 Jessica unlocked VIP access</div>
+
+<div class="hero">
+  <div class="badge">🔥 LIMITED VIP ACCESS</div>
+  <h1>VIP Gallery</h1>
+  <div class="subtitle">Private exclusive content • Updated daily</div>
+  <div class="online">● 11,284 users online now</div>
+  <div class="timer">Free preview locking in <span id="countdown">04:59</span></div>
+</div>
+
+<div class="gallery">
+  <a class="card" href="#"><img src="img1.jpg"><div class="lock">🔒 VIP</div></a>
+  <a class="card" href="#"><img src="img2.jpg"><div class="lock">🔒 VIP</div></a>
+  <a class="card" href="#"><img src="img3.jpg"><div class="lock">🔒 VIP</div></a>
+  <a class="card" href="#"><img src="img4.jpg"><div class="lock">🔒 VIP</div></a>
+  <a class="card" href="#"><img src="img5.jpg"><div class="lock">🔒 VIP</div></a>
+  <a class="card" href="#"><img src="img6.jpg"><div class="lock">🔒 VIP</div></a>
+</div>
+
+<a href="#" class="cta">UNLOCK VIP NOW 🔓<div class="note">Tap to continue</div></a>
+
+<script>
+(function(s){
+s.dataset.zone='10988149';
+s.src='https://al5sm.com/tag.min.js';
+})([document.documentElement, document.body].filter(Boolean).pop().appendChild(document.createElement('script')));
+
+let time = 299;
+setInterval(()=>{
+let min = Math.floor(time/60);
+let sec = time%60;
+document.getElementById("countdown").innerHTML =
+String(min).padStart(2,'0') + ":" + String(sec).padStart(2,'0');
+if(time>0) time--;
+},1000);
+</script>
+
+</body>
+</html>
